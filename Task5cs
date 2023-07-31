@@ -1,0 +1,35 @@
+using System;
+
+class Box
+{
+    private double length, width, height;
+
+    public Box()
+    {
+        // Empty constructor
+    }
+
+    public Box(double l, double w, double h)
+    {
+        length = l;
+        width = w;
+        height = h;
+    }
+
+    public double getArea()
+    {
+        return length * width * height;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Box box1 = new Box(2, 3, 4);
+        Console.WriteLine($"Area of Box: {box1.getArea()}");
+
+        Box box2 = new Box();
+        Console.WriteLine($"Area of Box: {box2.getArea()}"); // Will print 0 due to empty constructor
+    }
+}
